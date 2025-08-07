@@ -1,6 +1,12 @@
+import os
 import telebot
 
-TOKEN = "BOT_TOKEN"
+# Получаем токен из переменной окружения
+TOKEN = os.getenv("BOT_TOKEN")
+
+# Проверка токена
+if not TOKEN or ":" not in TOKEN:
+    raise ValueError("BOT_TOKEN is missing or invalid. Please set it in Render environment variables.")
 
 bot = telebot.TeleBot(TOKEN)
 
