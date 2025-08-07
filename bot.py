@@ -30,7 +30,7 @@ def handle_send(message):
         bot.send_message(message.chat.id, "Sizning huquqingiz yo'q!")
         return
 
-    text_to_send = "Isloqning Telegram kanaliga obuna bo'ling!"
+    text_to_send = "Bizda Android qurilmalari uchun ilovamiz borligini bilarmidingiz? 👀 Telegram kanalimizga o'tib tekshiring: @isloqapp"
     try:
         with open("users.txt", "r") as f:
             users = f.readlines()
